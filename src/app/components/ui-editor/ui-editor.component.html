@@ -1,0 +1,12 @@
+<div>
+  <div *ngFor="let block of blocks; index as i">
+    <div *ngIf="block.type != undefined">
+      <div [ngSwitch]="block.type.toLowerCase()">
+        <blocktype1 *ngSwitchCase="'blocktype1'" [block]="block" [index]="i" (delete)="onDelete($event, i)"></blocktype1>
+        <blocktype2 *ngSwitchCase="'blocktype2'" [block]="block" [index]="i" (delete)="onDelete($event, i)"></blocktype2>
+        <blocktype3 *ngSwitchCase="'blocktype3'" [block]="block" [index]="i" (delete)="onDelete($event, i)"></blocktype3> 
+      </div>
+    </div>    
+  </div> 
+  <add-block-form [types]="blockTypes" (addNewBlock)="onAddBlock($event)"></add-block-form>
+</div>

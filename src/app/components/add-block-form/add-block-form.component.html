@@ -1,0 +1,12 @@
+<div> 
+  <div>
+    <a href="" (click)="showForm($event)" *ngIf="!show">Add New Block</a> 
+  </div>
+  <div  class="types-form" *ngIf="show">
+    <div *ngFor="let type of types">
+      <label><input type="radio" [(ngModel)]="selected" [value]="type" name="type">{{ type }}</label>
+    </div>
+    <button class="btn" (click)="addBlock()">Add Block</button>
+    <button class="btn" (click)="cancel()">Cancel</button>
+  </div>
+</div> 

@@ -1,0 +1,19 @@
+<div class="blockType">
+  <div class="block-header">
+    <h2>BlockType #2</h2>    
+    <a href="" (click)="onDelete($event)">Delete</a>
+  </div>
+  <div *ngIf="block.title">
+    <label>{{ block.title.key }}</label>
+    <input [(ngModel)]="block.title.value">
+  </div>
+  <div *ngIf="block.description">
+    <label>{{ block.description.key }}
+      <div *ngFor="let option of block.description.options; index as i">
+         <label><input type="checkbox" [checked]="strToBool(option.value)" (change)="toggle(option.value, i)">{{ option.title }}
+        </label> 
+      </div>
+    </label>
+    
+    </div>
+</div>

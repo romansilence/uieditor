@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/codemirror/lib/codemirror.css';
+@import '../node_modules/codemirror/theme/monokai.css';
+
+app-code-editor {
+    width: 50%;
+}
+app-ui-editor {
+    margin-right: 20px;
+    width: 40%;
+    height: 90vh;
+    overflow-y: scroll; 
+    float: left;
+    background-color: #999;
+    padding: 20px;
+}
+add-block-form {
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.CodeMirror {
+    height: 90vh;
+}
+.types-form ,
+.blockType {
+    background-color: #ccc;
+    border: 1px solid #666;
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.blockType h2 {
+    display: inline;
+}
+.blockType a {
+    float: right;
+} 
+.blockType input[type="text"],
+.blockType textarea {
+    display: block;
+    width: 90%;
+}
+.blockType label {
+    display: block;
+}
+.blockType textarea {
+    resize: none;
+}

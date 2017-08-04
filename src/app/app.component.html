@@ -1,3 +1,2 @@
-<h1>
-  {{title}}
-</h1>
+<app-ui-editor [blocks]="getBlocks()" [blockTypes]="types" (addBlock)="addBlock($event)" (delete)="delete($event)"></app-ui-editor>
+<app-code-editor [content]="getContent()" (change)="change($event)"></app-code-editor>
