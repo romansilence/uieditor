@@ -11,7 +11,7 @@
     <label>{{ block.description.key }}</label>
     <div *ngFor="let option of block.description.options">
       <label>
-        <input type="radio" name="radiodesc{{index}}" [(ngModel)]="selected" (ngModelChange)="selectedChange(option.value)" [value]="option.value" (change)="onChange($event)">{{ option.title }}
+        <input type="radio" name="radiodesc{{index}}" [(ngModel)]="selected" (ngModelChange)="selectedChange(option.value)" [value]="option.value">{{ option.title }}
       </label>
     </div>
   </div>

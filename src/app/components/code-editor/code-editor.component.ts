@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class CodeEditorComponent implements OnInit {
   @Input() content: any;  
   @Output() change = new EventEmitter(); 
-
+  
   config: any;
 
   constructor() {
@@ -21,10 +21,10 @@ export class CodeEditorComponent implements OnInit {
   }
 
   ngOnInit() {
-        
   }
 
   onChange() {
     this.change.emit(this.content);
   }
+
 }

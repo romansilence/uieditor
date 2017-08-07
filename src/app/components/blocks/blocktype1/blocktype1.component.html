@@ -4,9 +4,7 @@
     <a href="" (click)="onDelete($event)">Delete</a>
   </div>
   <div *ngIf="block.title">
-    <label>
-      {{ block.title.key }}
-    </label>
+    <label>{{ block.title.key }}</label>
     <input [(ngModel)]="block.title.value">
   </div>
   <div *ngIf="block.description">

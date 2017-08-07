@@ -7,8 +7,6 @@ export class DataService {
   blocks: any = blocks; 
   blockTypes: any = blockTypes;
   
-  constructor() { }
-
   getBlocks() {
     return this.blocks;
   }
@@ -25,10 +23,6 @@ export class DataService {
     return this.blockTypes.find((block) => block.type == type);
   }
 
-  addNewBlock(type: string) {
-    this.blocks.push(this.findBlockByType(type));
-  }
-
   update(blocks) {
     if (this.isJsonString(blocks)) {
       this.blocks = JSON.parse(blocks);
@@ -40,7 +34,8 @@ export class DataService {
   }
 
   create(type: string) {
-    this.blocks.push(this.findBlockByType(type));
+    let newBlock = this.findBlockByType(type);
+    this.blocks.push(JSON.parse(JSON.stringify(newBlock)));
   }
 
   isJsonString(str) {

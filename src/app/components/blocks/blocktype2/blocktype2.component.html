@@ -10,7 +10,7 @@
   <div *ngIf="block.description">
     <label>{{ block.description.key }}
       <div *ngFor="let option of block.description.options; index as i">
-         <label><input type="checkbox" [checked]="strToBool(option.value)" (change)="toggle(option.value, i)">{{ option.title }}
+        <label><input type="checkbox" [checked]="strToBool(option.value)" (change)="toggle(option.value, i)">{{ option.title }}
         </label> 
       </div>
     </label>

@@ -9,7 +9,6 @@ export class Blocktype2Component implements OnInit {
   @Input() block;
   @Input() index: number;
   @Output() delete = new EventEmitter();
-  @Output() change = new EventEmitter();
 
   constructor() {
 
@@ -35,9 +34,5 @@ export class Blocktype2Component implements OnInit {
 
   toggle(value, index) {
     this.block.description.options[index].value = String(!this.strToBool(value));
-  }
-
-  onChange(event) {
-    this.change.emit();    
   }
 }

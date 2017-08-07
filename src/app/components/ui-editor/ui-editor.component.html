@@ -1,4 +1,4 @@
-<div>
+<div [dragula]='"bag-one"' [dragulaModel]='blocks'>
   <div *ngFor="let block of blocks; index as i">
     <div *ngIf="block.type != undefined">
       <div [ngSwitch]="block.type.toLowerCase()">
@@ -8,5 +8,5 @@
       </div>
     </div>    
   </div> 
-  <add-block-form [types]="blockTypes" (addNewBlock)="onAddBlock($event)"></add-block-form>
 </div>
+<add-block-form [types]="blockTypes" (addNewBlock)="onAddBlock($event)"></add-block-form>

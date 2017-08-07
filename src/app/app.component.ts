@@ -7,15 +7,11 @@ import { DataService } from './services/data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  blocksData: any;
   types: string[];
 
-  constructor(private dataService: DataService) {
-
-  }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.blocksData = this.dataService.getBlocks();
     this.types = this.dataService.getTypesOfBlocks();
   }
 
@@ -38,5 +34,4 @@ export class AppComponent implements OnInit {
   change(content) {
     this.dataService.update(content);
   }
-
 }
